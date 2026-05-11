@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:google_fonts/google_fonts.dart';
 
 import 'package:flutter_flashcard_quiz_app/answer_button.dart';
 import 'package:flutter_flashcard_quiz_app/data/questions.dart';
@@ -15,7 +16,7 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
 
   void answerQuestion() {
     setState(() {
-      currentQuestionIndex ++;
+      currentQuestionIndex++;
     });
   }
 
@@ -32,12 +33,16 @@ class _QuestionsScreenState extends State<QuestionsScreen> {
           children: [
             Text(
               currentQuestion.text,
-              style: const TextStyle(color: Colors.white),
+              style: GoogleFonts.indieFlower(
+                color: const Color.fromARGB(255, 255, 255, 255),
+                fontSize: 24,
+                fontWeight: FontWeight.bold,
+              ),
               textAlign: TextAlign.center,
             ),
             const SizedBox(height: 30),
             ...currentQuestion.getShuffledAnswer().map((answer) {
-              return AnswerButton(answerText: answer, onTap: answerQuestion,);
+              return AnswerButton(answerText: answer, onTap: answerQuestion);
             }),
           ],
         ),
