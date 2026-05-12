@@ -31,9 +31,7 @@ lib/
 ├── questions_screen.dart   # Displays questions + answer buttons
 ├── results_screen.dart     # Shows score summary
 ├── answer_button.dart      # Reusable answer button widget (Stateless)
-├── questions_summary/
-│   ├── questions_summary.dart
-│   └── summary_item.dart
+├── questions_summary.dart  # Summary list with color-coded results
 ├── models/
 │   └── quiz_question.dart  # QuizQuestion data model
 └── data/
